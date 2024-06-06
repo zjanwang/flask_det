@@ -38,7 +38,6 @@ while True:
     frame_with_det = cv2.cvtColor(np.array(det_plotted), cv2.COLOR_RGB2BGR)
 
     # 将标注后的图像帧写入视频输出流
-    out.write(frame_with_det)
 
     # 按下 'q' 键退出循环
     if cv2.waitKey(1) & 0xFF == ord('q'):
