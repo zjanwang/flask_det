@@ -4,7 +4,7 @@ from ultralytics import YOLO
 
 # 视频异常检测
 # 加载异常检测模型
-model = YOLO('../model/yolo_pip.pt')
+model = YOLO('../model/pip_seg.pt')
 
 # 打开视频文件
 video_capture = cv2.VideoCapture('../Resources/pip/pip_1.avi')  # 示例，假设视频文件为mp4格式
@@ -20,7 +20,7 @@ height = int(video_capture.get(cv2.CAP_PROP_FRAME_HEIGHT))
 fourcc = cv2.VideoWriter_fourcc(*'XVID')
 
 # 输出文件保存位置
-out = cv2.VideoWriter('../result/out/seg_pip_1.avi', fourcc, fps, (width, height))
+out = cv2.VideoWriter('../result/out/seg_pip_se.avi', fourcc, fps, (width, height))
 
 # 逐帧处理视频
 while True:

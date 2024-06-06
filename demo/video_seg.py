@@ -32,7 +32,7 @@ while True:
     detections = model.predict(frame)
 
     # 将检测结果绘制在原始帧上
-    det_plotted = detections[0].plot(boxes=False)
+    det_plotted = detections[0].plot()
 
     # 将 PIL 格式的图像转换为 OpenCV 格式
     frame_with_det = cv2.cvtColor(np.array(det_plotted), cv2.COLOR_RGB2BGR)
